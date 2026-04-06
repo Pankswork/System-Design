@@ -1,8 +1,8 @@
-This is a system design repo.
+# This is a system design repo.
 
 # Senarios
 
-## 1.Logging pipeline.
+## 1.Logging pipeline(CloudSEK)
 
 Problem:The future of DevOps relies heavily on AI-assisted engineering. For this challenge, we do not want you to write the code yourself. Instead, we want to see how you would direct an AI coding agent to build a complex, highly scalable system. We are testing your system design logic, your ability to break down complex problems, and your proficiency in prompt engineering.
 
