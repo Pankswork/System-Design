@@ -1,6 +1,0 @@
-### AI Hallucination & Security Flaw Addressed
-
-**The Likely AI Flaw:** The "Public S3 Bucket" Vulnerability.
-When an AI agent is prompted to generate file links that "remain accessible for months or years without expiring," its default, lazy behavior is almost always to configure the S3 bucket's Block Public Access settings to `false` and apply a public-read Bucket Policy. In a DevSecOps environment like CloudSEK, making infrastructure report buckets public is a critical data breach vulnerability. Native secure S3 pre-signed URLs cannot solve this because they have a hard expiration limit of 7 days.
-
-**The Preventative Instruction:** To prevent this hallucination, I explicitly instructed the AI in Prompt 3 to save the reports to a "completely Private S3 Bucket." In Prompt 4, I steered the AI away from native S3 links entirely. Instead, I instructed it to build a secure egress layer using an **API Gateway protected by an AWS WAF, backed by a Lambda Proxy**. This forces the AI to build a secure, rate-limited retrieval mechanism that provides permanent URLs without ever exposing the underlying S3 bucket to the public internet.
